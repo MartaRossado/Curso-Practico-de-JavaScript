@@ -118,9 +118,37 @@ function renderProducts(myProductsArray){
 
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
+
     
+
+
+
+        // --------------------- Toda la movida con la imagen --------------------------------
         const productImg = document.createElement('img');
         productImg.setAttribute('src', product.image);
+
+        //  funcionalidad para que al clicar la imagen abra el detalle de producto 
+        const productDetail = document.querySelector('.product-detail');
+        productImg.addEventListener('click', openProductDetail);
+
+        function openProductDetail(){
+            productDetail.classList.remove('inactive');
+            productShoppingCart.classList.add('inactive');
+        }
+
+        const closeIconProductDetail = document.querySelector('.product-detail-close');
+        closeIconProductDetail.addEventListener('click', closeProductDetail);
+
+        function closeProductDetail(){
+            productDetail.classList.add('inactive');
+        }
+
+        // ---------------------------------------------------
+
+
+
+
+
     
         const productInfo = document.createElement('div');
         productInfo.classList.add('product-card-info');
