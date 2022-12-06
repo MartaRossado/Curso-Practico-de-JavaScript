@@ -41,7 +41,7 @@ console.log('JS MenúMobile Funcionando');
 
 /* ------------ Funcionalidad desplegable para CARRITO (SHOPING CART)*/
 const menuShoppingCartIcon = document.querySelector('.navbar-shopping-cart');
-const productShoppingCart = document.querySelector('.product-detail-menu-shopping-cart');
+const productShoppingCart = document.querySelector('.product-cart-menu-shopping-cart');
 
 menuShoppingCartIcon.addEventListener('click', toggleShoppingCart);
 
@@ -101,8 +101,8 @@ productList.push({
 <div class="product-card">
     <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
 
-    <div class="product-info">
-        <div class="product-info-text">
+    <div class="product-card-info">
+        <div class="product-card-info-text">
             <p>$120,00</p>
             <p>Bike</p>
         </div>
@@ -123,10 +123,10 @@ function renderProducts(myProductsArray){
         productImg.setAttribute('src', product.image);
     
         const productInfo = document.createElement('div');
-        productInfo.classList.add('product-info');
+        productInfo.classList.add('product-card-info');
     
         const productInfoDiv = document.createElement('div');
-        productInfoDiv.classList.add('product-info-text');
+        productInfoDiv.classList.add('product-card-info-text');
         
         const productPrice = document.createElement('p');
         productPrice.innerHTML = '€' + product.price;
